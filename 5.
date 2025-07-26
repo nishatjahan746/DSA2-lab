@@ -1,0 +1,6 @@
+def len_count(n):
+    if n == 0:
+        return 0
+    else:
+        return 1+ len_count(n//10)
+print(len_count(89))
