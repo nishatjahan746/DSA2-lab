@@ -1,0 +1,7 @@
+def seris(n):
+    if n == 0 or n == 1:
+       return n
+    else:
+        return n**2 + seris(n-1)
+print(seris(3))
+       
