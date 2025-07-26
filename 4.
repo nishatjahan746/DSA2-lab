@@ -1,0 +1,8 @@
+def pal(str):
+    str = ''.join(str.split()).lower()
+    if len(str) ==0 or len(str)==1:
+        return True
+    if str[0]!= str[-1]:
+        return False
+    return pal(str[1:-1])
+print (pal("evil olive"))
