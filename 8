@@ -1,0 +1,18 @@
+def sum_odd(arr):
+    
+    
+    if len(arr) == 1:
+        if arr [0] %2!=0:
+            return arr[0]
+        else:
+            return 0
+    
+    
+        
+    mid = len(arr)//2
+    left = arr[:mid]
+    right = arr[mid:]
+    return sum_odd(left) + sum_odd(right)
+arr=[1,10,2,5,9]
+print(sum_odd(arr))
+
