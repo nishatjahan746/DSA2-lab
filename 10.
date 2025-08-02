@@ -1,0 +1,18 @@
+def find_max_min(arr):
+    
+    if len(arr)==1:
+        return(arr[0],arr[0])
+    
+    
+    
+    mid = len(arr)//2
+    left_half = arr[:mid]
+    right_half = arr[mid:]
+    
+    left_max,left_min = find_max_min(left_half)
+    right_max,right_min = find_max_min(right_half)
+    maxi = max(left_max,right_max)
+    mini = min(left_min,right_min)
+    return(maxi,mini)
+arr = [11,100,2,5,9]
+print(find_max_min(arr))
