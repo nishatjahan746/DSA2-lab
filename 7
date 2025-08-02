@@ -1,0 +1,17 @@
+def count_even(arr):
+     
+     
+    if len(arr) == 1:
+        if arr[0]%2==0:
+            return 1
+        else:
+            return 0
+     
+     
+    mid = len(arr)//2
+    left_half = arr[:mid]
+    right_half= arr[mid:]
+    return count_even(left_half)+count_even(right_half)
+arr = [1,12,10,2,19]   
+print("Count of even numbers:", count_even(arr))
+    
